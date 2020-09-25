@@ -19,6 +19,3 @@ vgcore*
 *.exe
 *.out
 *.app
-
-/bkp
-*.swp
