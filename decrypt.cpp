@@ -1,15 +1,7 @@
-#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <map>
 #include <unordered_map>
-#include <cmath>
-#include <thread>
-#include <cstring>
-#include <set>
-#include <chrono>
-#include <ctime>
 
 #include "key.hpp"
 #include "decrypt.hpp"
