@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
 
    encrypted = KEYinit((unsigned char *) argv[1]);
    
-   // print out input password
+   // print out encrypted password
    printf("   ");
    KEYshow(encrypted);
    printf("\n");
@@ -27,7 +27,6 @@ int main(int argc, char *argv[]){
    }
 
    bruteForce(&encrypted,T);
-
 }
 
 void bruteForce(Key * encrypted, Key T[N]){

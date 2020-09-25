@@ -39,13 +39,6 @@ int main(int argc, char *argv[]) {
       scanf("%s", buffer);
       T[i] = KEYinit(buffer);
    }
-   // Key one, zero; // representation of 000......0001 in binary
-
-   // zero = KEYinit((unsigned char *) "aaaaa");
-   // one = KEYinit((unsigned char *) "aaaab");
-   // int result = equalKeys(one,one);
-   // printf("Equality : %d", result);
-   // printf("\n");
    
    // compute subset sum
    encrypted = KEYsubsetsum(password, T);
@@ -56,36 +49,3 @@ int main(int argc, char *argv[]) {
    
    return 0;
 }
-
-// Key createNumKey(int num){
-//    Key a; // key to return
-//    unsigned char * n[C];
-//    char letter[N];
-
-//    if (num < 33){
-//       char t = ALPHABET[num];
-//       append(letter, t);
-//       printf("%c", t);
-//       for(int loop = 0; loop < 40; loop++)
-//       // printf("%u", letter[loop]);
-
-//       *n = makeCopy(*n, letter, C);
-//    }
-// }
-
-// unsigned char * makeCopy(unsigned char * arr, char * letter, int c){
-//    int len = strlen(letter);
-//    printf("%d", len);
-//    for (int i = 0; i<=len; i++){
-//       arr[i] = 'a';
-//       printf("%c", arr[i]);
-//    }
-//    return arr;
-// }
-
-// void append(char* s, char c) {
-//         int len = strlen(s);
-//         printf("%d", len);
-//         s[0] = c;
-//         s[len+1] = '\0';
-// }
