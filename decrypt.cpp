@@ -47,18 +47,19 @@ public:
 };
 
 void Symbol::decrypt(const std::string &encrypted) {
-    // do the brute on the first half of the table
+    // Idea: do the brute on the first half of the table - encrypt keys of length N/2 from 0.
+    // This gives every possible first-half-sum since only first N/2 keys are used.
 
-    // 2nd: for each of the N/2 first-half-sums, you will have to do the second half of the encryption using
+    // For each of the N/2 first-half-sums, the second half of the encryption is done using
     // the second half of the table (do each of the N/2 possible second-half-sums and add the first-half-sum
     // and the second-half-sum together)
 
-    // Now, imagine that you have every possible second-half-sum (2N/2) saved somewhere in memory,
-    // and that you can reference each of the 2N/2 sums somehow in a way that is querryable by each second-half-sum.
+    // Now, imagine that you have every possible first-half-sum (N/2) saved somewhere in memory,
+    // and that you can reference each of the N/2 sums somehow in a way that is querryable by each first-half-sum.
     
     // If so, and we take our value that we are trying to decrypt as E.
-    // For each of the N/2 first-half-sums, look up which stored second-half-sum adds with
-    // the first-half-sum to equal E - compare secod halfsum with E-firsthalfsum. (optimizable to constant complexity)
+    // For each of the second-half-sums, look up which stored first-half-sum adds with
+    // the second-half-sum to equal E ,i.e, compare second-half-sum with E-first-half-sum. (optimizable to constant complexity)
 
     CPU_timer t;
     t.tic();
