@@ -18,7 +18,7 @@ Every single possible combination of subset sum that could work as a result of r
   3. Compute encryption key of every second-half-sum `00000...[11111...11111]` to `11111...[11111...11111]`
   4. For each of the 2^(N/2) second-half-sums, look up (in **expected** constant time) which stored first-half-sum adds with the second-half-sum to equal the encrypted key and print matches.
 
-[complexity.txt](complexity.txt) - time complexity analysis for the decryption of each C-char password
+[complexity.txt](complexity.txt) - asymptotic complexity analysis for the decryption of each C-char password
 
 P.S: C++ was used for the second one as unordered_map was readily available to implement a hash table - therefore, I converted key.c to key.hpp to experiment with the splitting sums idea.
 Hence, `decrypt.c` is still pending
